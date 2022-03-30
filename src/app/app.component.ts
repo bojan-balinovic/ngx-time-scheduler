@@ -40,29 +40,13 @@ export class AppComponent implements OnInit {
 
     this.periods = [
       {
-        name: '2 week',
-        timeFrameHeaders: ['MMM YYYY', 'DD(ddd)'],
-        timeFrameHeadersTooltip: ['MMM YYYY', 'DD(ddd)'],
-        classes: '',
-        timeFrameOverall: 1440 * 14,
-        timeFramePeriod: 1440,
-      },
-      {
-        name: '3 days',
-        timeFramePeriod: (60 * 3),
-        timeFrameOverall: (60 * 24 * 3),
-        timeFrameHeaders: [
-          'Do MMM',
-          'HH'
-        ],
+        name: '1 day',
+        timeFramePeriod: 60,
+        timeFrameOverall: 30 * 24,
+        timeFrameHeaders: ['Do MMM', 'HH:mm'],
         classes: 'period-3day',
-      }, {
-        name: '1 week',
-        timeFrameHeaders: ['MMM YYYY', 'DD(ddd)'],
-        classes: '',
-        timeFrameOverall: 1440 * 7,
-        timeFramePeriod: 1440,
-      }];
+      },
+    ];
 
     this.sections = [{
       name: 'A',

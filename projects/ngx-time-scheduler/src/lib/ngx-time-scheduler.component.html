@@ -32,6 +32,7 @@
   <div class="time-sch-table-wrapper">
     <table class="time-sch-table">
       <tr *ngFor="let timeFrameHeader of header; let i = index; trackBy: trackByFn">
+        <td class="time-sch-section text-center" *ngIf="i==1"></td>
 
         <td class="time-sch-section text-center" *ngIf="i === 0" [rowSpan]="periods.length">
           {{text.SectionTitle}}
@@ -52,6 +53,7 @@
       <table class="time-sch-table">
         <tr *ngFor="let sectionItem of sectionItems; trackBy: trackByFn"
             [style.height]="sectionItem.minRowHeight + 'px'">
+          
           <td class="time-sch-section text-center" #sectionTd
               (click)="events.SectionClickEvent ? events.SectionClickEvent(sectionItem.section) : false"
               (contextmenu)="events.SectionContextMenuEvent ? events.SectionContextMenuEvent(sectionItem.section, $event) : false"

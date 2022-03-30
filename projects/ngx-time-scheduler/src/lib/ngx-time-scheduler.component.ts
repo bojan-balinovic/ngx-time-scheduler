@@ -46,7 +46,7 @@ export class NgxTimeSchedulerComponent implements OnInit, OnDestroy {
   @Input() events: Events = new Events();
   @Input() start = moment().startOf('day');
 
-  end = moment().endOf('day');
+  @Input() end = moment().endOf('day');
   showGotoModal = false;
   currentTimeIndicatorPosition: string;
   currentTimeVisibility = 'visible';
@@ -89,6 +89,7 @@ export class NgxTimeSchedulerComponent implements OnInit, OnDestroy {
 
   setSectionsInSectionItems() {
     this.sectionItems = new Array<SectionItem>();
+    // this.sectionItems.push(new SectionItem());
     this.sections.forEach(section => {
       const perSectionItem = new SectionItem();
       perSectionItem.section = section;
