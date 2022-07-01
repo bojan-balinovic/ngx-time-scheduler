@@ -190,7 +190,7 @@ export class NgxTimeSchedulerComponent implements OnInit, OnDestroy {
   changePeriod(period: Period, userTrigger: boolean = true) {
     this.currentPeriod = period;
     const _start = this.start;
-    this.end = moment(_start).add(this.currentPeriod.timeFrameOverall, 'minutes').endOf('day');
+    //this.end = moment(_start).add(this.currentPeriod.timeFrameOverall, 'minutes');
     this.currentPeriodMinuteDiff = Math.abs(this.start.diff(this.end, 'minutes'));
 
     if (userTrigger && this.events.PeriodChange) {
