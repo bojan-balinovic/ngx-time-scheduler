@@ -25,6 +25,7 @@ export class Section {
   id: number;
   name: string;
   tooltip?: string;
+  classes?:string[];
 }
 
 export class Text {
